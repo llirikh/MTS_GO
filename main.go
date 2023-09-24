@@ -1,4 +1,4 @@
-package MTS_GO
+package main
 
 import (
 	"MTS_GO/pkg"
