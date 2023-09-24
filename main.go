@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// create array of Books
-	book := []pkg.Book{
+	book := []*pkg.Book{
 		pkg.NewBook("Герой нашего времени", "Михаил Лермонтов", "Лабиринт"),
 		pkg.NewBook("Жёлтая стрела", "Виктор Пелевин", "Лабиринт"),
 		pkg.NewBook("Путешествие в Икстлан", "Карлос Кастенеда", "София"),
@@ -22,7 +22,7 @@ func main() {
 	library1 := pkg.NewLibrary(storage1, hash1)
 
 	for i := 0; i < len(book); i++ {
-		library1.AddBook(book[i])
+		library1.AddBook(*book[i])
 	}
 
 	fmt.Println()
@@ -37,7 +37,7 @@ func main() {
 	library2 := pkg.NewLibrary(storage2, hash2)
 
 	for i := 0; i < len(book); i++ {
-		library2.AddBook(book[i])
+		library2.AddBook(*book[i])
 	}
 
 	fmt.Println()
