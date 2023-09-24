@@ -19,7 +19,7 @@ func main() {
 	storage1 := pkg.NewMapStorage()
 	hash1 := pkg.PolynomialHash()
 
-	library1 := pkg.NewLibrary(storage1, hash1)
+	library1 := pkg.NewLibrary(&storage1, &hash1)
 
 	for i := 0; i < len(book); i++ {
 		library1.AddBook(*book[i])
@@ -34,7 +34,7 @@ func main() {
 	storage2 := pkg.NewSliceStorage()
 	hash2 := pkg.ReversePolynomialHash()
 
-	library2 := pkg.NewLibrary(storage2, hash2)
+	library2 := pkg.NewLibrary(&storage2, &hash2)
 
 	for i := 0; i < len(book); i++ {
 		library2.AddBook(*book[i])
