@@ -16,6 +16,6 @@ func (lib *Library) GetBook(title string) (Book, error) {
 }
 
 func (lib *Library) AddBook(book Book) {
-	id := lib.getId(&book.Title)
+	id := lib.getId(&book.title)
 	lib.storage.AddBook(id, &book)
 }

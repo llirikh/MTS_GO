@@ -1,7 +1,7 @@
 package pkg
 
 type Book struct {
-	Title     string
+	title     string
 	author    string
 	publisher string
 }
@@ -11,7 +11,7 @@ func NewBook(title, author, publisher string) Book {
 }
 
 func (book Book) GetTitle() string {
-	return book.Title
+	return book.title
 }
 
 func (book Book) GetAuthor() string {
